@@ -1,0 +1,32 @@
+Q2 Write difference between var let and constant with example.
+Ans.
+1) Var is declaration is in the global scope or function scope. Let and const have a local scope.
+2)Let and const are write in the block ( {...} ).
+3)	a)Var can be update and redeclared withiin its scope.
+	b)let can be updated but not re-declared.
+	c)const variable cannot be updated nor redeclared.
+4)var eg.
+	var a=2;
+	function newfun()
+	{
+		var  b=3;
+		console.log(b); //output : 3
+		console.log(a); //output : 2
+	}   
+	console.log(b); //output : error because it has function       				  scope
+	console.log(a); //output : 2
+
+
+  variable a is gobal scope and b is function scope.
+
+5)  let x=3
+                if(x==3)
+                { 
+                let x=4;
+                console.log(x);//output :4
+                }
+                console.log(x);//output : 3
+6)   const y=1;
+     y=2;//error Assignment to constant variable.
+	const a=5; 
+     a=a+10;;//error Assignment to constant variable.
