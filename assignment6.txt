@@ -1,0 +1,13 @@
+Q3. Write brief intro on available datatype in JavaScript.
+Ans.
+1)	Datatype are basically specify what kind of data can be stored and manipulated within a program.
+2)	There are six datatype in JavaScript which can be divided in three categories a) primitive or primary b) composite or reference and c) special data types.
+3)	String, Number and Boolean are primitive data types.
+4)	Object, array and function are composite data types.
+5)	Whereas Undefended and Null are special data types.
+6)	String data type - var a =”hello world”;
+7)	Number data type – var num = 10;
+8)	Boolean data type – var isSleeping= true;
+9)	Undefined data type – var a;
+10)Null data type – var = null;
+
