@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   Employee Name: <input type="text" id="emp_name">
+   <br>
+    Sales of employee:<input type="text" name="Sales" id="salesamt">
+    <br>
+    <button type="button" onclick="sales()">Commission</button>
+    <h1 id="commission"></h1>
+    <Script>
+        function sales() {
+            var sale = parseInt(document.getElementById('salesamt').value);
+            var emp= document.getElementById('emp_name').value;
+            if (sale <= 5000) {
+                var commission = sale * (2 / 100);
+                document.getElementById('commission').innerHTML ="Total Commission earned by "+emp+" this year is " +commission +"rs.";
+                // document.write(commission);
+            }
+            else if (sale > 5000 && sale <= 10000) {
+                var commission = (5000 * (2 / 100)) +(( sale-5000) * (5 / 100));
+                
+                document.getElementById('commission').innerHTML ="Total Commission earned by "+emp+" this year is " +commission +"rs.";
+                // document.write(commission);
+            }
+            else if (sale > 10000 && sale <= 20000) {
+                var commission = (5000 * (2 / 100))+(5000 * (5 / 100))+((sale-10000) * (7 / 100));
+    
+                document.getElementById('commission').innerHTML ="Total Commission earned by "+emp+" this year is " +commission +"rs.";
+                // document.write(commission);
+            }
+            else if (sale > 20000) {
+                var commission = 5000 * (2 / 100)+(5000 * (5 / 100))+(10000 * (7 / 100))+((sale-20000) * (10 / 100));
+           
+                document.getElementById('commission').innerHTML ="Total Commission earned by "+emp+" this year is " +commission +"rs.";
+                    // document.write(commission);
+
+            }
+
+
+        }
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Number1=<input id='num1' type="text"placeholder="Enter no. 1" >
+    Number2=<input id='num2' type="text" placeholder="Enter no. 2" >
+    <hr>
+    <br>
+    <button id='add'type="submit" onclick="add(num1,num2);">+</button>
+    <button type="button" onclick="sub()">-</button>
+    <button type="button" onclick="multi()">*</button>
+    <button type="button" onclick="div()">/</button>
+
+    <br>
+    <button type="button" onclick="sq1()">Square Root of no. 1</button>
+    <button type="button" onclick="sq2()">Square Root of no. 2</button>
+    <br>
+    For percentage Enter the First Number as marks and Second Number as total Marks:<br> 
+    <button type="button" onclick="percentag();">%</button>
+    <br>
+    <hr>
+    Answer:<input id='ans' type="text" placeholder="Answer" name="ans" onkeydown="add" o>
+    <script>
+      
+      
+        
+          function add(){
+            var a=parseInt(document.getElementById('num1').value);
+            var b=parseInt(document.getElementById('num2').value);
+            var result=a+b;
+            document.getElementById('ans').value=result;
+          }
+          function sub(){
+            var a=parseInt(document.getElementById('num1').value);
+            var b=parseInt(document.getElementById('num2').value);
+            var result=a-b;
+            document.getElementById('ans').value=result;
+          }
+          function multi(){
+            var a=parseInt(document.getElementById('num1').value);
+            var b=parseInt(document.getElementById('num2').value);
+            var result=a*b;
+            document.getElementById('ans').value=result;
+          }
+          function div(){
+            
+            var a=parseInt(document.getElementById('num1').value);
+            var b=parseInt(document.getElementById('num2').value);
+            var result=a/b;
+            document.getElementById('ans').value=result;
+          }
+          function sq1(){
+            //  document.getElementById('ans').value=
+            var a=parseInt(document.getElementById('num1').value);
+            var result=Math.sqrt(a);
+            document.getElementById('ans').value=result;
+          }
+          function sq2(){
+            //  document.getElementById('ans').value=
+            var b=parseInt(document.getElementById('num2').value);
+            var result=Math.sqrt(b);
+            document.getElementById('ans').value=result;
+          }
+          function percentag(){
+            //  document.getElementById('ans').value=
+            var a=parseInt(document.getElementById('num1').value);
+            var b=parseInt(document.getElementById('num2').value);
+            var result=(a/100)*b;
+            document.getElementById('ans').value=result;
+          }
+      
+    </script>
+</body>
+</html>

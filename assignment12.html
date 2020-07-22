@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let shoppingList=[
+            'Bread','Buttor',"Vegitables","Fruits","Milk","Wheat","Flour"
+        ]
+        let shoppingBasket=[];
+        shoppingBasket=shoppingList;
+        // shoppingBasket.join(shoppingList);
+        //before adding some other items
+        console.log("shoppingList=",shoppingList);
+        console.log("shoppingBasket=",shoppingBasket);
+        //after adding some other items
+        shoppingBasket.push("Pulses","Dryfruits","Biscuit");
+        console.log("shoppingBasket after adding more items=",shoppingBasket);
+    </script>
+</body>
+</html>
