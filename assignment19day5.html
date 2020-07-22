@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name, age, email) {
+                this.name = name;
+                this.age = age;
+                this.email = email;
+                this.courses=[];
+            }
+            login() {
+                console.log('User ' + this.name + ' has logged in');
+                return this;
+            }
+            logout() {
+                console.log('User ' + this.name + ' has logged out');
+                return this;
+            }
+
+        }
+        class Moderator extends User {
+            constructor(name, age, email) {
+                super(name, age, email);
+                this.lucoin = 0;
+            }
+            addcoins() {
+                this.lucoin++;
+                console.log('Moderator ' + this.name + ' has ' + this.lucoin + ' coin');
+                return this;
+            }
+            removecoins() {
+                this.lucoin--;
+                console.log('Moderator ' + this.name + ' has ' + this.lucoin + ' coin');
+                return this;
+            }
+        }
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+                console.log(user);
+
+            }
+            removeCourse(user,course){
+                user.courses.pop(course);
+                console.log(user);
+
+            }
+
+        }
+        user1 = new User("Sahil", 21, 'sahil@gmail.com');
+        //    console.log(user1);
+        user1.login();
+        user1.logout();
+        moderator1 = new Moderator('Abc', 25, "abc@gmail.com");
+        admin1=new Admin('xyz',29,'xyz@gmail.com');
+        moderator1.addcoins();
+        moderator1.addcoins();
+        moderator1.removecoins();
+        admin1.addCourse('Sahil','javascript');
+        admin1.removeCourse('Sahil','javascript');
+
+    </script>
+</body>
+
+</html>

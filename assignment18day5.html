@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <button type="button" onclick="addintoarr()">Enter</button>
+    <script>
+        var arrnum = [];
+        function addintoarr() {
+            var inp=document.getElementById('num');
+            var numbers = parseInt(document.getElementById('num').value);
+            arrnum.push(numbers);
+            let cube= arrnum.map((el)=>(el**3));
+            let odd=arrnum.map ((el)=>{
+                     if(el%2==0)
+                    {
+                        return null;
+                    }
+                    else{ return (el)}
+               
+            })
+            console.log(arrnum);
+            console.log(cube);
+            console.log(odd);
+            inp.value="";
+        }
+
+        
+    </script>
+</body>
+
+</html>
