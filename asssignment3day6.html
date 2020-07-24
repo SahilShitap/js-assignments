@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darkmode {
+            background-color: black;
+            color: white;
+            /* visibility:; */
+        }
+      
+    </style>
+</head>
+
+<body id='body' >
+    <div>
+        <h2 id='clock'></h2>
+        <h1>hello LETSUPGRADE</h1>
+        <p>
+        <h3>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex doloribus a cum iusto cupiditate
+            rem, et facere vero laborum nihil iure voluptatum dolor voluptatem ut nesciunt. Eveniet inventore
+            tempore nulla voluptates, odit cupiditate quod illum quisquam doloremque debitis, asperiores voluptatem?
+
+            Quis culpa, veniam
+            praesentium voluptatibus dolorum quo. Blanditiis quia pariatur repellendus saepe consequuntur sequi dicta.
+        </h3>
+        </p>
+    </div>
+    <button type="button" id='btn'>DARK MODE</button>
+    
+    
+    <script>
+        var body1 = document.getElementById('body');
+        var clock = document.getElementById('clock');
+        var button = document.getElementById('btn');
+     
+
+        function Clock() {
+            let date = new Date;
+            let time = date.toLocaleTimeString();
+
+            clock.innerText = time;
+        }
+        setInterval(Clock, 1000);
+        button.onclick = () => {
+            
+            body.classList.add('darkmode');
+            button.setAttribute('style','visibility:hidden');
+            
+         
+        }
+      
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: red;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        body.change {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body id='body'>
+   
+    <script>
+
+        var arr = ['red', 'blue', 'green', 'yellow']
+        const body = document.getElementById('body');
+        var i=0;
+        function change() {
+            body.style.backgroundColor = arr[i];
+            i++;
+            if (i > arr.length - 1) {
+                i=0;
+            }
+        }
+setInterval(() => {
+    change();
+}, 5000);
+
+    </script>
+</body>
+
+</html>

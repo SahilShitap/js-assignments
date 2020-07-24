@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id='num'>
+    <button type="button" id='btn'>Enter</button>
+    <ul id='table'>
+
+    </ul>
+    <script>
+
+        const tableli = document.getElementById('table');
+        const button = document.getElementById('btn');
+
+        button.onclick = () => {
+            var num = document.getElementById('num').value;
+
+            for (let index = 1; index <= 10; index++) {
+                var li = document.createElement('li');
+                tableli.appendChild(li).innerText = num + ' x ' + index + ' = ' + num * index;
+
+
+            }
+
+        };
+
+    </script>
+
+</body>
+
+</html>
